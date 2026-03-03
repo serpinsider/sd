@@ -147,7 +147,7 @@ export const ADDONS: AddOn[] = [
     key: 'townhouse', 
     label: 'Townhouse Clean', 
     description: 'Multi-level homes', 
-    icon: 'stairs.png',
+    icon: 'townhouse.png',
     tooltip: "Additional charge for multi-level homes and townhouses."
   },
   { 
