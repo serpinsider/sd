@@ -161,7 +161,7 @@ export const ADDONS: AddOn[] = [
     key: 'extraHour', 
     label: 'Extra Hour', 
     description: 'Additional time', 
-    icon: 'vacuum.png',
+    icon: 'extra-hour.png',
     tooltip: "Add an extra hour of cleaning time for larger jobs."
   },
   { 
