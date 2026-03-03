@@ -170,7 +170,19 @@ export const ADDONS: AddOn[] = [
     description: 'Clean stairs', 
     icon: 'stairs.png',
     tooltip: "Deep cleaning for stairways and steps."
+  },
+  {
+    key: 'carpetCleaning',
+    label: 'Carpet Cleaning',
+    description: 'Deep carpet clean',
+    icon: 'carpet.png',
+    tooltip: "Professional carpet cleaning service."
+  },
+  {
+    key: 'windowBlinds',
+    label: 'Window Blinds',
+    description: 'Clean blinds',
+    icon: 'blinds.png',
+    tooltip: "We wet wipe your window blinds."
   }
 ];
-
-
