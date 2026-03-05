@@ -144,13 +144,6 @@ export const ADDONS: AddOn[] = [
     tooltip: "30 minutes of handyman services for minor repairs and tasks."
   },
   { 
-    key: 'townhouse', 
-    label: 'Townhouse Clean', 
-    description: 'Multi-level homes', 
-    icon: 'townhouse.png',
-    tooltip: "Additional charge for multi-level homes and townhouses."
-  },
-  { 
     key: 'insideKitchenCabinets', 
     label: 'Kitchen Cabinets', 
     description: 'Clean kitchen cabinets', 

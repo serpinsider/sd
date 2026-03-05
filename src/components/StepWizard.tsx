@@ -47,7 +47,6 @@ interface FormData {
     carpetCleaning: boolean;
     tileAndGrout: boolean;
     officeCleaning: boolean;
-    townhouse: boolean;
     extraHour: boolean;
     washerDryer: boolean;
     stairwayCleaning: boolean;
@@ -105,7 +104,6 @@ export default function StepWizard({ onFormExpand }: StepWizardProps = {}) {
       carpetCleaning: false,
       tileAndGrout: false,
       officeCleaning: false,
-      townhouse: false,
       extraHour: false,
       washerDryer: false,
       stairwayCleaning: false,
@@ -232,7 +230,6 @@ export default function StepWizard({ onFormExpand }: StepWizardProps = {}) {
         carpetCleaning: false,
         tileAndGrout: false,
         officeCleaning: false,
-        townhouse: false,
         extraHour: false,
         washerDryer: false,
         stairwayCleaning: false,
@@ -247,6 +244,8 @@ export default function StepWizard({ onFormExpand }: StepWizardProps = {}) {
         baseboardCleaning: true
       } : value === 'moveout' ? {
         bedroomBathroomCabinets: true,
+        insideKitchenCabinets: true,
+        interiorWindows: true,
         wallStainRemoval: true,
         tileAndGrout: true,
         baseboardCleaning: true
@@ -304,7 +303,7 @@ export default function StepWizard({ onFormExpand }: StepWizardProps = {}) {
       (formData.serviceType === 'deep' && 
         (addonKey === 'wallStainRemoval' || addonKey === 'tileAndGrout' || addonKey === 'baseboardCleaning')) ||
       (formData.serviceType === 'moveout' && 
-        (addonKey === 'bedroomBathroomCabinets' || addonKey === 'wallStainRemoval' || addonKey === 'tileAndGrout' || addonKey === 'baseboardCleaning'));
+        (addonKey === 'bedroomBathroomCabinets' || addonKey === 'insideKitchenCabinets' || addonKey === 'interiorWindows' || addonKey === 'wallStainRemoval' || addonKey === 'tileAndGrout' || addonKey === 'baseboardCleaning'));
     
     // If trying to uncheck an auto-included addon, do nothing
     if (isAutoIncluded && formData.addons[addonKey as keyof typeof formData.addons]) {
@@ -397,7 +396,6 @@ export default function StepWizard({ onFormExpand }: StepWizardProps = {}) {
         carpetCleaning: false,
         tileAndGrout: false,
         officeCleaning: false,
-        townhouse: false,
         extraHour: false,
         washerDryer: false,
         stairwayCleaning: false,
@@ -424,7 +422,7 @@ export default function StepWizard({ onFormExpand }: StepWizardProps = {}) {
       const includedInService = formData.serviceType === 'deep'
         ? ['wallStainRemoval', 'tileAndGrout', 'baseboardCleaning']
         : formData.serviceType === 'moveout'
-        ? ['bedroomBathroomCabinets', 'wallStainRemoval', 'tileAndGrout', 'baseboardCleaning']
+        ? ['bedroomBathroomCabinets', 'insideKitchenCabinets', 'interiorWindows', 'wallStainRemoval', 'tileAndGrout', 'baseboardCleaning']
         : [];
       const selectedAddons = Object.entries(formData.addons)
         .filter(([key, value]) => value && !includedInService.includes(key))
@@ -733,7 +731,7 @@ export default function StepWizard({ onFormExpand }: StepWizardProps = {}) {
                       (formData.serviceType === 'deep' && 
                         (addon.key === 'wallStainRemoval' || addon.key === 'tileAndGrout' || addon.key === 'baseboardCleaning')) ||
                       (formData.serviceType === 'moveout' && 
-                        (addon.key === 'bedroomBathroomCabinets' || addon.key === 'wallStainRemoval' || addon.key === 'tileAndGrout' || addon.key === 'baseboardCleaning'));
+                        (addon.key === 'bedroomBathroomCabinets' || addon.key === 'insideKitchenCabinets' || addon.key === 'interiorWindows' || addon.key === 'wallStainRemoval' || addon.key === 'tileAndGrout' || addon.key === 'baseboardCleaning'));
                     return !isAutoIncluded;
                   }).map((addon) => {
                     const isSelected = formData.addons[addon.key as keyof typeof formData.addons];
