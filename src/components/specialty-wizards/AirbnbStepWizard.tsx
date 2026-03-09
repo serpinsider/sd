@@ -150,6 +150,7 @@ export default function AirbnbStepWizard({ onFormExpand }: AirbnbStepWizardProps
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           business: 'San Diego Maids',
+          businessId: 'sandiego',
           serviceType: 'Airbnb/Vacation Rental Cleaning',
           firstName: formData.firstName, lastName: formData.lastName, email: formData.email, phone: formData.phone,
           propertyType: formData.propertyType, bedrooms: formData.bedrooms, bathrooms: formData.bathrooms,

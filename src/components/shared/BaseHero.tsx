@@ -1,6 +1,7 @@
 'use client';
 
 import StepWizard from '../StepWizard';
+import { STEP_WIZARD_CONFIG } from '@/lib/step-wizard-config';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useCallback } from 'react';
@@ -158,7 +159,7 @@ export default function BaseHero({
               }}
             >
               <div className={LAYOUTS.hero.formCard}>
-                <StepWizard onFormExpand={handleFormExpand} />
+                <StepWizard onFormExpand={handleFormExpand} config={STEP_WIZARD_CONFIG} />
               </div>
             </div>
           ) : quoteUrl ? (

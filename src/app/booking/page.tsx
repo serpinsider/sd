@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 
 export default function BookingPage() {
   return (
-    <main className="min-h-screen" style={{ background: 'rgba(30, 35, 40, 0.98)' }}>
+    <main className="min-h-screen" style={{ background: 'rgba(15, 23, 42, 1)' }}>
       <BookingKoalaEmbed />
     </main>
   );

@@ -6,6 +6,5 @@ Sitemap: https://sandiegomaids.com/sitemap.xml
 Disallow: /api/
 Disallow: /login
 Disallow: /signup
-Disallow: /quote/test-quote
 
 Crawl-delay: 1

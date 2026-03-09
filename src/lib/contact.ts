@@ -11,11 +11,11 @@ export const CONTACT_INFO = {
     raw: 'hello@sandiegomaids.com'
   },
   address: {
-    street: '123 Broadway',
+    street: '750 B St',
     city: 'San Diego',
     state: 'CA',
     zip: '92101',
-    full: '123 Broadway, San Diego, CA 92101'
+    full: '750 B St, San Diego, CA 92101'
   },
   social: {
     facebook: 'https://www.facebook.com/sandiegomaids',

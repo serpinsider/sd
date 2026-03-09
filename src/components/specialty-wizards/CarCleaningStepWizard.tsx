@@ -79,7 +79,8 @@ export default function CarCleaningStepWizard({ onFormExpand }: CarCleaningStepW
       const confirmationNumber = 'PC-CAR-' + Math.random().toString(36).substring(2, 8).toUpperCase();
       const response = await fetch('https://formspree.io/f/mrbjzvde', { method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
-          business: 'San Diego Maids', 
+          business: 'San Diego Maids',
+          businessId: 'sandiego', 
           serviceType: 'Car Cleaning', 
           firstName: formData.firstName, 
           lastName: formData.lastName, 

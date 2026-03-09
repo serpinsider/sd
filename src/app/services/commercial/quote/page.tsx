@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function CommercialQuotePage() {
   return (
-    <main className="min-h-screen pt-32" style={{ background: 'rgba(30, 35, 40, 0.98)' }}>
+    <main className="min-h-screen pt-32" style={{ background: 'rgba(15, 23, 42, 1)' }}>
       <CommercialQuoteForm />
     </main>
   );

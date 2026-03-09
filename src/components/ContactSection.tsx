@@ -47,7 +47,7 @@ export default function ContactSection() {
         return;
       }
 
-      const confirmationNumber = 'PC-CONTACT-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+      const confirmationNumber = 'SD-CONTACT-' + Math.random().toString(36).substring(2, 8).toUpperCase();
 
       const structuredData = {
         firstName: formData.firstName,
@@ -56,6 +56,8 @@ export default function ContactSection() {
         phone: formData.phone,
         message: formData.message,
         confirmationNumber,
+        business: 'San Diego Maids',
+        businessId: 'san-diego',
         _subject: `San Diego Maids - Contact from ${formData.firstName} ${formData.lastName} - #${confirmationNumber}`,
         sourcePage: typeof window !== 'undefined' ? window.location.pathname : '',
       };

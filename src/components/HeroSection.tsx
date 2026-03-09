@@ -1,6 +1,7 @@
 'use client';
 
 import StepWizard from './StepWizard';
+import { STEP_WIZARD_CONFIG } from '@/lib/step-wizard-config';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useCallback } from 'react';
@@ -165,7 +166,7 @@ export default function HeroSection({ location = "San Diego" }: HeroSectionProps
             <div 
               className="bg-white/20 backdrop-blur-md rounded-2xl shadow-xl border border-white/30 p-4 sm:p-6 relative w-full min-w-0 sm:min-w-[400px]"
             >
-              <StepWizard onFormExpand={handleFormExpand} />
+              <StepWizard onFormExpand={handleFormExpand} config={STEP_WIZARD_CONFIG} />
             </div>
           </div>
         </div>
