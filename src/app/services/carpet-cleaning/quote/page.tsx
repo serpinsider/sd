@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
+import { INLINE_STYLES } from '@/styles/colors';
 import CarpetQuoteForm from '@/components/CarpetQuoteForm';
+import { INLINE_STYLES } from '@/styles/colors';
 
 export const metadata: Metadata = {
   title: 'Carpet Cleaning Quote - San Diego Maids',
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function CarpetQuotePage() {
   return (
-    <main className="min-h-screen" style={{ background: 'rgba(15, 23, 42, 1)' }}>
+    <main className="min-h-screen" style={INLINE_STYLES.primary}>
       <CarpetQuoteForm />
     </main>
   );

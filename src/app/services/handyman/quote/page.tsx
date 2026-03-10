@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
+import { INLINE_STYLES } from '@/styles/colors';
 import HandymanQuoteForm from '@/components/HandymanQuoteForm';
+import { INLINE_STYLES } from '@/styles/colors';
 
 export const metadata: Metadata = {
   title: 'Handyman Services Quote - San Diego Maids',
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function HandymanQuotePage() {
   return (
-    <main className="min-h-screen" style={{ background: 'rgba(15, 23, 42, 1)' }}>
+    <main className="min-h-screen" style={INLINE_STYLES.primary}>
       <HandymanQuoteForm />
     </main>
   );

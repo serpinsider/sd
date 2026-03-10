@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
+import { INLINE_STYLES } from '@/styles/colors';
 import CommercialQuoteForm from '@/components/CommercialQuoteForm';
+import { INLINE_STYLES } from '@/styles/colors';
 
 export const metadata: Metadata = {
   title: 'Commercial Cleaning Quote - San Diego Maids',
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function CommercialQuotePage() {
   return (
-    <main className="min-h-screen" style={{ background: 'rgba(15, 23, 42, 1)' }}>
+    <main className="min-h-screen" style={INLINE_STYLES.primary}>
       <CommercialQuoteForm />
     </main>
   );
