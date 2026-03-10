@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function CarCleaningQuotePage() {
   return (
-    <main className="min-h-screen pt-32" style={{ background: 'rgba(15, 23, 42, 1)' }}>
+    <main className="min-h-screen" style={{ background: 'rgba(15, 23, 42, 1)' }}>
       <CarCleaningQuoteForm />
     </main>
   );
