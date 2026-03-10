@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function AirbnbQuotePage() {
   return (
-    <main className="min-h-screen" style={INLINE_STYLES.primary}>
+    <main className="min-h-screen pt-32" style={INLINE_STYLES.primary}>
       <AirbnbQuoteForm />
     </main>
   );
