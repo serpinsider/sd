@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 
 export default function QuotePage() {
   return (
-    <main className="min-h-screen pt-32" style={{ background: 'rgba(26, 55, 85, 0.95)' }}>
+    <main className="min-h-screen" style={{ background: 'rgba(26, 55, 85, 0.95)' }}>
       <QuoteForm />
     </main>
   );
