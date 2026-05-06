@@ -12,7 +12,7 @@ export default function SignupPage() {
           
           <div className="bg-white rounded-lg overflow-hidden" style={{ minHeight: '800px' }}>
             <iframe 
-              src="https://camaids.bookingkoala.com/signup?embed=true" 
+              src="https://pacificmaids.bookingkoala.com/signup?embed=true" 
               style={{
                 border: 'none',
                 height: '800px',
@@ -22,7 +22,7 @@ export default function SignupPage() {
               title="Sign Up"
             />
             <Script 
-              src="https://camaids.bookingkoala.com/resources/embed.js" 
+              src="https://pacificmaids.bookingkoala.com/resources/embed.js" 
               strategy="lazyOnload"
             />
           </div>

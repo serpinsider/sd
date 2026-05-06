@@ -54,21 +54,21 @@ export default function JoinOurTeamPage() {
       const applicationNumber = 'PC-APP-' + Math.random().toString(36).substring(2, 8).toUpperCase();
 
       const structuredData = {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        phone: formData.phone,
-        address: formData.address,
-        experience: formData.experience,
-        availability: formData.availability,
-        transportation: formData.transportation,
-        notes: formData.notes,
-        applicationNumber,
+        "First Name": formData.firstName,
+        "Last Name": formData.lastName,
+        "Email": formData.email,
+        "Phone": formData.phone,
+        "Address": formData.address,
+        "Experience": formData.experience,
+        "Availability": formData.availability,
+        "Transportation": formData.transportation,
+        "Notes": formData.notes,
+        "Application Number": applicationNumber,
         _subject: `San Diego Maids - Application from ${formData.firstName} ${formData.lastName} - #${applicationNumber}`,
         sourcePage: typeof window !== 'undefined' ? window.location.pathname : '',
       };
 
-      const formspreeResponse = await fetch('https://formspree.io/f/mrbjzvde', {
+      const formspreeResponse = await fetch('https://formspree.io/f/xvzwolek', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

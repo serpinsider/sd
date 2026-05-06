@@ -24,7 +24,7 @@ export default function BookingKoalaEmbed() {
     window.addEventListener('resize', updateHeight)
 
     const script = document.createElement('script')
-    script.src = 'https://camaids.bookingkoala.com/resources/embed.js'
+    script.src = 'https://pacificmaids.bookingkoala.com/resources/embed.js'
     script.defer = true
     document.body.appendChild(script)
 
@@ -53,7 +53,7 @@ export default function BookingKoalaEmbed() {
     <div className="w-full max-w-7xl mx-auto px-4 pt-32 pb-12">
       <iframe 
         ref={iframeRef}
-        src="https://camaids.bookingkoala.com/booknow?embed=true" 
+        src="https://pacificmaids.bookingkoala.com/booknow?embed=true"
         className="w-full border-none"
         style={{ height: iframeHeight, minHeight: '100vh' }}
         scrolling="no"
@@ -62,6 +62,3 @@ export default function BookingKoalaEmbed() {
     </div>
   )
 }
-
-
-

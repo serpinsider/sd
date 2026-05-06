@@ -50,19 +50,13 @@ export default function ContactSection() {
       const confirmationNumber = 'SD-CONTACT-' + Math.random().toString(36).substring(2, 8).toUpperCase();
 
       const structuredData = {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        phone: formData.phone,
-        message: formData.message,
-        confirmationNumber,
         business: 'San Diego Maids',
         businessId: 'san-diego',
         _subject: `San Diego Maids - Contact from ${formData.firstName} ${formData.lastName} - #${confirmationNumber}`,
         sourcePage: typeof window !== 'undefined' ? window.location.pathname : '',
       };
 
-      const formspreeResponse = await fetch('https://formspree.io/f/mrbjzvde', {
+      const formspreeResponse = await fetch('https://formspree.io/f/xvzwolek', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

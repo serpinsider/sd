@@ -307,7 +307,7 @@ export default function QuoteForm() {
         'Confirmation Number': confirmationNumber
       };
 
-      const response = await fetch('https://formspree.io/f/mrbjzvde', {
+      const response = await fetch('https://formspree.io/f/xvzwolek', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

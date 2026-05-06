@@ -1,5 +1,10 @@
 import { Metadata } from 'next';
-import BookingKoalaEmbed from '@/components/BookingKoalaEmbed';
+import NativeBookingForm from '@/components/NativeBookingForm';
+import { STEP_WIZARD_CONFIG } from '@/lib/step-wizard-config';
+
+// /booking can carry ?t=<prefill-token>; force-dynamic so useSearchParams
+// works without a build-time error and tokens resolve per request.
+export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'Book Your Cleaning - San Diego Maids',
@@ -43,7 +48,12 @@ export const metadata: Metadata = {
 export default function BookingPage() {
   return (
     <main className="min-h-screen" style={{ background: 'rgba(15, 23, 42, 1)' }}>
-      <BookingKoalaEmbed />
+      <NativeBookingForm
+        brandSlug={STEP_WIZARD_CONFIG.businessId}
+        businessName={STEP_WIZARD_CONFIG.businessName}
+        accentColor={STEP_WIZARD_CONFIG.accentColor}
+        btnTextColor={STEP_WIZARD_CONFIG.btnTextColor}
+      />
     </main>
   );
 }

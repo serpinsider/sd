@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import { INLINE_STYLES } from '@/styles/colors';
 import CarCleaningQuoteForm from '@/components/CarCleaningQuoteForm';
-import { INLINE_STYLES } from '@/styles/colors';
 
 export const metadata: Metadata = {
   title: 'Car Cleaning Quote - San Diego Maids',
@@ -27,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function CarCleaningQuotePage() {
   return (
-    <main className="min-h-screen" style={INLINE_STYLES.primary}>
+    <main className="min-h-screen pt-32" style={INLINE_STYLES.primary}>
       <CarCleaningQuoteForm />
     </main>
   );

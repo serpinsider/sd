@@ -31,7 +31,7 @@ export const STEP_WIZARD_CONFIG: StepWizardConfig = {
   businessName: 'San Diego Maids',
   businessId: 'san-diego',
   confirmationPrefix: 'SD',
-  formspreeEndpoint: 'mrbjzvde',
+  formspreeEndpoint: 'xvzwolek',
   accentColor: '#dfbd69',
   accentDark: '#c9a84c',
   btnTextColor: '#283845',

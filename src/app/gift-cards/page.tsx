@@ -12,7 +12,7 @@ export default function GiftCardsPage() {
           
           <div className="bg-white rounded-lg overflow-hidden" style={{ minHeight: '1000px' }}>
             <iframe 
-              src="https://camaids.bookingkoala.com/gift-cards/send?embed=true" 
+              src="https://pacificmaids.bookingkoala.com/gift-cards/send?embed=true" 
               style={{
                 border: 'none',
                 height: '1000px',
@@ -22,7 +22,7 @@ export default function GiftCardsPage() {
               title="Gift Cards"
             />
             <Script 
-              src="https://camaids.bookingkoala.com/resources/embed.js" 
+              src="https://pacificmaids.bookingkoala.com/resources/embed.js" 
               strategy="lazyOnload"
             />
           </div>

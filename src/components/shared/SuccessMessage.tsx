@@ -1,6 +1,5 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { CONTACT_INFO } from '@/lib/contact';
 
 interface SuccessMessageProps {
@@ -13,17 +12,22 @@ interface SuccessMessageProps {
 }
 
 export default function SuccessMessage({ type, confirmationNumber, frequency, inline = false, onClose, serviceLabel }: SuccessMessageProps) {
-  const router = useRouter();
-
   const handleGetAnotherQuote = () => {
-    router.push('/quote');
+    if (typeof window === 'undefined') return;
+    if (window.location.pathname === '/quote') {
+      window.location.reload();
+    } else {
+      window.location.assign('/quote');
+    }
   };
 
   const handleGoHome = () => {
     if (inline && onClose) {
       onClose();
-    } else {
-      router.push('/');
+      return;
+    }
+    if (typeof window !== 'undefined') {
+      window.location.assign('/');
     }
   };
 

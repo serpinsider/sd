@@ -22,6 +22,7 @@ interface BaseHeroProps {
   description: string;
   location?: string;
   showWizard?: boolean;
+  CustomWizard?: React.ComponentType<{ onFormExpand?: (expanded: boolean, immediate?: boolean) => void }>;
   quoteUrl?: string; // For specialty services that need dedicated quote pages
 }
 
@@ -30,6 +31,7 @@ export default function BaseHero({
   description, 
   location = "Near You",
   showWizard = true,
+  CustomWizard,
   quoteUrl
 }: BaseHeroProps) {
   const [isFormExpanded, setIsFormExpanded] = useState(false);
@@ -159,7 +161,11 @@ export default function BaseHero({
               }}
             >
               <div className={LAYOUTS.hero.formCard}>
-                <StepWizard onFormExpand={handleFormExpand} config={STEP_WIZARD_CONFIG} />
+                {CustomWizard ? (
+                  <CustomWizard onFormExpand={handleFormExpand} />
+                ) : (
+                  <StepWizard onFormExpand={handleFormExpand} config={STEP_WIZARD_CONFIG} />
+                )}
               </div>
             </div>
           ) : quoteUrl ? (
