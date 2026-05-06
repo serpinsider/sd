@@ -53,6 +53,7 @@ export default function BookingPage() {
         businessName={STEP_WIZARD_CONFIG.businessName}
         accentColor={STEP_WIZARD_CONFIG.accentColor}
         btnTextColor={STEP_WIZARD_CONFIG.btnTextColor}
+        cardBg="rgba(22, 48, 75, 0.95)"
       />
     </main>
   );
